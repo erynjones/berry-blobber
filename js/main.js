@@ -42,24 +42,23 @@ var writeBerries = function (berries) {
     document.write('<h2>' + berry.name + '</h2>');
     document.write('<dl>');
     document.write('<dt>Grows on Shrub?</dt>');
-    document.write('<dt>Energy</dt>');
-    document.write('<dd><i>' + berry.energy + '</i></dd>');
-    document.write('<dt>Carbs</dt>');
-    document.write('<dd><i>' + berry.carbs + '</i></dd>');
-    document.write('<dt>Protien</dt>');
-    document.write('<dd><i>' + berry.protien + '</i></dd>');
-    document.write('</dl>');
 
     document.write('<dd>');
 
-    if (berry.onShrub.true) {
+    if (berry.onShrub == true) {
       document.write('Yes');
-    }
-    if (berry.onShrub.false) {
+    } else {
       document.write('No');
     }
 
     document.write('</dd>');
+    document.write('<dt>Energy</dt>');
+    document.write('<dd>' + berry.energy + '</dd>');
+    document.write('<dt>Carbs</dt>');
+    document.write('<dd>' + berry.carbs + '</dd>');
+    document.write('<dt>Protein</dt>');
+    document.write('<dd>' + berry.protein + '</dd>');
+    document.write('</dl>');
   });
 };
 
